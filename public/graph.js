@@ -1,7 +1,5 @@
 'use strict';
 
-const { base_url } = require("../config");
-
 function drawVisJs(nodes, edges) {
     nodes.forEach(node => {
         processNode(node);
@@ -60,7 +58,7 @@ function listenToEvents(network) {
             return;
         }
 
-        get(base_url + '/nodedata/' + nodeId)
+        get(base_url + 'nodedata/' + nodeId)
             .then(node => {
                 console.log(node);
                 console.log(node.data);

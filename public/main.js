@@ -1,9 +1,9 @@
 'use strict';
 
-const { base_url } = require("../config");
-
 // TODO : move inside the iife
 var ws, network, nodesDataSet, edgesDataSet, nodes, edges, selectedNode, nodesMap = new Map();
+
+const base_url = '/';
 
 const lastOp = () => showAll();
 
@@ -22,7 +22,7 @@ function getTree(visible) {
     .width($('.right-panel').width())
     .height($(document).height());
 
-  get(base_url + '/tree')
+  get(base_url + 'tree')
     .then(data => {
       console.log(data);
 

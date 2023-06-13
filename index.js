@@ -104,8 +104,6 @@ app.get('/nodedata/:nodeid', function (req, res) {
   });
 });
 
-
-
 const socket = require('./app/socket');
 socket.initialize(server);
 
